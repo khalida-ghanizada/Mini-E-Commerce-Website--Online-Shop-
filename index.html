@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini E-Commerce Website (Online Shop)</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="fas fa-store"></i> Mini E-Commerce
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main>
+
+<!-- Hero Section -->
+<header class="text-center p-5 bg-light">
+    <h1 class="display-5">Welcome to Mini E-Commerce Shop</h1>
+    <p class="lead">Find your best products at affordable prices</p>
+
+    <button onclick="toggleDarkMode()" class="btn btn-dark mt-2">
+        <i class="fas fa-moon"></i> Dark Mode
+    </button>
+
+    <a href="#product-list" class="btn btn-primary mt-2">
+        <i class="fas fa-shopping-bag"></i> Shop Now
+    </a>
+
+    <!-- Search -->
+    <div class="container mt-3 px-3">
+        <label for="search" class="visually-hidden">Search products</label>
+        <input 
+            type="text" 
+            id="search" 
+            class="form-control" 
+            placeholder="Search products..." 
+        >
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="container text-center mt-3">
+        <button class="btn btn-outline-primary m-1" onclick="filterProducts('all')">All</button>
+        <button class="btn btn-outline-primary m-1" onclick="filterProducts('Jewelry')">Jewelry</button>
+        <button class="btn btn-outline-primary m-1" onclick="filterProducts('clothes')">Clothes</button>
+        <button class="btn btn-outline-primary m-1" onclick="filterProducts('shoes')">Shoes</button>
+    </div>
+</header>
+
+<!-- Product Section -->
+<section class="container mt-4">
+    <h2 class="text-center mb-4">Our Products</h2>
+    <div class="row" id="product-list"></div>
+</section>
+
+<!-- Carousel -->
+<div id="carouselExample" class="carousel slide container mt-4" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./images/Bracelet.jpg" class="d-block w-100 img-fluid" alt="Bracelet">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/Earring.jpg" class="d-block w-100 img-fluid" alt="Earring">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/Ring.jpg" class="d-block w-100 img-fluid" alt="Ring">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/Diamond.jpg" class="d-block w-100 img-fluid" alt="Diamond">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/Hazaragi Dress.jpg" class="d-block w-100 img-fluid" alt="Clothing traditional dress">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/Kuchi Dress.jpg" class="d-block w-100 img-fluid" alt="Afghani Kuchi Dress">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/Wedding Dress.jpg" class="d-block w-100 img-fluid" alt="Wedding Dress">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/Silver bracelet.jpg" class="d-block w-100 img-fluid" alt="Silver Bracelet">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/Glass Shoes.jpg" class="d-block w-100 img-fluid" alt="Glass Shoes">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/Sport Shoes.jpg" class="d-block w-100 img-fluid" alt=" Sport Shoes">
+        </div>
+        </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3 mt-4">
+    <p>&copy; Khalida Ghanizada 2026 Mini E-Commerce | All Rights Reserved</p>
+
+    <div class="text-center py-3">
+        <a href="https://www.facebook.com/Khalida.Ghanizada" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="https://www.instagram.com/khalida.ghanizada/" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://x.com/Khalida_Ghani" class="text-white me-3"><i class="fab fa-x-twitter fa-lg"></i></a>
+        <a href="https://www.linkedin.com/in/khalida-ghanizada-866a4b153/" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/khalida-ghanizada" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
+        <a href="mailto:khalida.ghanizada@gmail.com" class="text-white me-3"><i class="fas fa-envelope fa-lg"></i></a>
+    </div>
+
+    <hr class="my-4 w-50 mx-auto">
+</footer>
+
+<!-- Scripts -->
+<script src="./js/script.js"></script>
+<script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
