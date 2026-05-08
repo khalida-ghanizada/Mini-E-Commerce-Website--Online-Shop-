@@ -1,4 +1,4 @@
-// PRODUCTS DATA
+// Product Data
 const products = [
     {
         id: 1,
@@ -67,7 +67,7 @@ const products = [
 
 let filteredProducts = [...products];
 
-// DISPLAY PRODUCTS
+// Display Products
 
 function displayProducts(productArray) {
     const productList = document.getElementById("product-list");
@@ -91,7 +91,7 @@ function displayProducts(productArray) {
     });
 }
 
-// FILTER PRODUCTS
+// Filter Products
 
 function filterProducts(category) {
     if (category === "all") {
@@ -103,7 +103,7 @@ function filterProducts(category) {
 }
 
 
-// SEARCH FUNCTION
+// Search Functionality
 
 document.getElementById("search").addEventListener("input", function () {
     const searchValue = this.value.toLowerCase();
@@ -116,7 +116,7 @@ document.getElementById("search").addEventListener("input", function () {
 });
 
 
-// CART FUNCTIONALITY
+// Cart Functionality
 
 function getCart() {
     return JSON.parse(localStorage.getItem("cart")) || [];
@@ -138,7 +138,7 @@ function updateCartCount() {
     const cart = getCart();
     document.getElementById("cart-count").innerText = cart.length;
 }
-// DARK MODE
+// Dark Mode Toggle
 function toggleDarkMode() {
     document.body.classList.toggle("bg-dark");
     document.body.classList.toggle("text-white");
@@ -152,13 +152,13 @@ function loadDarkMode() {
         document.body.classList.add("bg-dark", "text-white");
     }
 }
-// INITIAL LOAD
+// Initial Load
 window.onload = function () {
     displayProducts(products);
     updateCartCount();
     loadDarkMode();
 };
-// CONTACT FORM VALIDATION
+// Contact Form Validation
 const form = document.getElementById("checkoutForm");
 
 if (form) {
