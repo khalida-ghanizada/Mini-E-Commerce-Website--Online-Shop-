@@ -1,5 +1,4 @@
 // Product Data
-
 const products = [
     {
         id: 1,
@@ -66,11 +65,9 @@ const products = [
     }
 ];
 
-
 // Filtered Products Array
 
 let filteredProducts = [...products];
-
 
 // Display Products Function
 
@@ -136,7 +133,6 @@ function displayProducts(productArray) {
     });
 }
 
-
 // Filter Products Function
 
 function filterProducts(category) {
@@ -157,7 +153,6 @@ function filterProducts(category) {
     displayProducts(filteredProducts);
 }
 
-
 // Search Functionality
 
 const searchInput = document.getElementById("search");
@@ -176,7 +171,6 @@ if (searchInput) {
         displayProducts(searchedProducts);
     });
 }
-
 
 // Cart Functions
 
@@ -218,7 +212,6 @@ function updateCartCount() {
     }
 }
 
-
 // Dark Mode Functions
 
 function toggleDarkMode() {
@@ -246,7 +239,6 @@ function loadDarkMode() {
         document.body.classList.add("text-white");
     }
 }
-
 
 // Checkout Form Validation
 
@@ -276,7 +268,6 @@ if (form) {
         form.classList.remove("was-validated");
     });
 }
-
 
 // Initialize Load
 
